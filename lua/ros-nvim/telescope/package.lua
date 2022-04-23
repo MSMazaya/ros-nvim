@@ -8,7 +8,7 @@ M.search_package = function()
         vim.notify("Not in a ROS package", "error", {title = "Search ROS package"})
         return
     end
-    package_path, _ = string.gsub(package_path, "/home/sv/catkin_ws/src", "~/main")
+    package_path, _ = string.gsub(package_path, "~dagozilla_ws/src", "~/main")
     require("telescope.builtin").find_files(
         {
             prompt_title = "< " .. package_name .. " >",
@@ -23,7 +23,7 @@ M.grep_package = function()
         vim.notify("Not in a ROS package", "error", {title = "Grep ROS package"})
         return
     end
-    package_path, _ = string.gsub(package_path, "/home/sv/catkin_ws/src", "~/main")
+    package_path, _ = string.gsub(package_path, "~/dagozilla_ws/src", "~/main")
     require("telescope.builtin").live_grep(
         {
             search_dirs = {package_path}

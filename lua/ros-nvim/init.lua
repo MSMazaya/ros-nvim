@@ -4,7 +4,7 @@ local action_state = require "telescope.actions.state"
 local M = {}
 
 ROS_CONFIG = {
-    catkin_ws_path = "~/catkin_ws",
+    catkin_ws_path = "~/dagozilla_ws",
     -- vim_utils.open_new_buffer or custom function
     open_terminal_method = function()
         vim_utils.open_split()
